@@ -22,9 +22,9 @@ for current_trace in trace_list:
     for attack_trace in known_attacks:
         if attack_trace in current_trace[0]:
             current_trace[1] += 1
-            # print("Found attack in", filepath, "!")
-            # print("Attack trace:", attack_trace)
-            # print("Data trace:", current_trace)
+            print("Found attack in", filepath, "!")
+            print("Attack trace:", attack_trace)
+            print("Data trace:", current_trace)
             attack_counter += 1
 
 Traces = pd.DataFrame(trace_list, columns=['System Calls', 'Malicious'])
